@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -25,7 +26,57 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: pages[_currentIndex],
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                color: Colors.blue,
+                child: Text(
+                  "Grumpy & Doc",
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.odorMeanChey(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                height: 100,
+                color: Colors.green,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Expanded(child: Container(color: Colors.orange,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text("今日已撥打0次"),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Icon(Icons.diamond),
+                            Text("5.0"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  )),
+                  Expanded(child: Container(color: Colors.pink)),
+                ]),
+              ),
+            ),
+            Container(height: 220, width: 500, color: Colors.yellow),
+            Container(height: 132, width: 500, color: Colors.purple),
+          ],
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20.0),
