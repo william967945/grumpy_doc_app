@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/pages/homepage.dart';
 import 'package:test_project/utils/colors.dart';
 
-import 'pages/homepage.dart';
 
 
 void main() => runApp(MaterialApp(home: MyApp()));
@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         scaffoldBackgroundColor: mainThemeColor,
       ),
-      home: Homepage(),
+      home: HomePage(),
     );
   }
 }
