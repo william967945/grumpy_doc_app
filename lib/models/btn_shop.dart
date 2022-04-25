@@ -21,17 +21,17 @@ class mainbtn_shop extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.0)) ,
           ),
           Positioned(
-            top: -20,
+            top: 10,
             child: Image.asset(
-              'assets/images/GP.png',
-              height: 50,
-              width: 50,
+              'assets/images/Grumpy_mail.png',
+              height: 100,
+              width: 100,
             ),
           ),
           Positioned(
-              bottom: 30,
+              bottom: 12,
               child: Text(
-                "開始你的語音通話",
+                "小矮人商店",
               style: TextStyle(color: Color(0xFF6F4031),fontWeight: FontWeight.bold),
               ),)
         ]);

@@ -25,15 +25,15 @@ class mainbtn_mail extends StatelessWidget {
             Positioned(
               top: -20,
               child: Image.asset(
-                'assets/images/GP.png',
+                'assets/images/Grumpy_mail.png',
                 height: 50,
                 width: 50,
               ),
             ),
             Positioned(
-                bottom: 30,
+                bottom: 12,
                 child: Text(
-                  "開始你的語音通話",
+                  "小矮人信箱",
                 style: TextStyle(color: Color(0xFF6F4031),fontWeight: FontWeight.bold),
                 ),)
           ]),
