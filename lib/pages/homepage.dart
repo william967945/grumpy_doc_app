@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               height: 70,
-              color: Colors.green,
+              //color: Colors.green,
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Expanded(
                     child: Container(
-                  color: Colors.orange,
+                  //color: Colors.orange,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Column(
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 )),
                 Expanded(
                     child: Container(
-                  color: Colors.pink,
+                  //color: Colors.pink,
                   child: Column(
                     children: [
                       Row(
@@ -105,31 +105,43 @@ class _HomePageState extends State<HomePage> {
                 )),
               ]),
             ),
-            Container(
-              height: 270,
-              width: 500,
-              //color: Colors.yellow,
-              child: Center(
-                child: mainbtn_homepage(),
-              ),
+
+            ///
+            //*
+            ///
+            Column(
+              children: [
+                Container(
+                  height: 270,
+                  width: 500,
+                  //color: Colors.yellow,
+                  child: Center(
+                    child: mainbtn_homepage(),
+                  ),
+                ),
+                Container(
+                    height: 160,
+                    width: 500,
+                    //color: Colors.purple,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                          child: MainBtnShop(),
+                          onPressed: () {},
+                        ),
+                        TextButton(onPressed: () {}, child: MainBtnMail()),
+                      ],
+                    )),
+              ],
             ),
-            Container(
-                height: 160,
-                width: 500,
-                color: Colors.purple,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right:18.0),
-                      child: mainbtn_shop(),
-                    ),
-                    mainbtn_mail(),
-                  ],
-                )),
+            //////
+            //////
           ],
         ),
       ),
+      ///////
+      ///////
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
         child: ClipRRect(

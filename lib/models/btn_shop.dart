@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_project/utils/colors.dart';
 
-class mainbtn_shop extends StatelessWidget {
-  const mainbtn_shop({
+class MainBtnShop extends StatelessWidget {
+  const MainBtnShop({
     Key? key,
   }) : super(key: key);
 
@@ -22,8 +22,9 @@ class mainbtn_shop extends StatelessWidget {
           ),
           Positioned(
             top: 10,
+            right: 15,
             child: Image.asset(
-              'assets/images/Grumpy_mail.png',
+              'assets/images/Grumpy.png',
               height: 100,
               width: 100,
             ),

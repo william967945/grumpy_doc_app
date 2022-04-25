@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/pages/choose_gd.dart';
 import 'package:test_project/pages/homepage.dart';
 import 'package:test_project/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,6 +26,9 @@ class _MyAppState extends State<MyApp> {
         textTheme: GoogleFonts.odorMeanCheyTextTheme(Theme.of(context).textTheme)
       ),
       home: HomePage(),
+      routes: <String, WidgetBuilder>{
+        '/a': (BuildContext context) => ChoosingGDpage(title: 'page A'),
+      },
     );
   }
 }
