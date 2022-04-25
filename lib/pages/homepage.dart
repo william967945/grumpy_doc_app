@@ -1,5 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test_project/models/btn_mail.dart';
+import 'package:test_project/models/btn_mainCall.dart';
+import 'package:test_project/models/btn_shop.dart';
+import 'package:test_project/utils/colors.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -18,7 +24,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   List<Widget> pages = const [
-    Text('eco', style: _textStyle),
+    Text('phone', style: _textStyle),
     Text('home', style: _textStyle),
     Text('person', style: _textStyle),
   ];
@@ -28,26 +34,25 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           children: [
-            Expanded(
-              child: Container(
-                alignment: Alignment.bottomCenter,
-                color: Colors.blue,
-                child: Text(
-                  "Grumpy & Doc",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.odorMeanChey(
-                    fontSize: 20,
-                  ),
-                ),
+            Container(
+              height: 100,
+              alignment: Alignment.bottomCenter,
+              //color: Colors.blue,
+              child: Text(
+                "Grumpy & Doc",
+                textAlign: TextAlign.center,
+                style:
+                    GoogleFonts.odorMeanChey(fontSize: 20, color: Colors.white),
               ),
             ),
-            Expanded(
-              child: Container(
-                height: 100,
-                color: Colors.green,
-                child:
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Expanded(child: Container(color: Colors.orange,
+            Container(
+              height: 70,
+              color: Colors.green,
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Expanded(
+                    child: Container(
+                  color: Colors.orange,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Column(
@@ -55,31 +60,78 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text("今日已撥打0次"),
+                            Text(
+                              "今日已撥打0次",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Icon(Icons.diamond),
-                            Text("5.0"),
+                            Icon(
+                              Icons.diamond,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              "5.0",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  )),
-                  Expanded(child: Container(color: Colors.pink)),
-                ]),
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.pink,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.logo_dev),
+                          Text("1級新手Doc"),
+                          Icon(Icons.arrow_drop_down_rounded)
+                        ],
+                      ),
+                      // for notification
+                      Row(
+                        children: [],
+                      )
+                    ],
+                  ),
+                )),
+              ]),
+            ),
+            Container(
+              height: 270,
+              width: 500,
+              //color: Colors.yellow,
+              child: Center(
+                child: mainbtn_homepage(),
               ),
             ),
-            Container(height: 220, width: 500, color: Colors.yellow),
-            Container(height: 132, width: 500, color: Colors.purple),
+            Container(
+                height: 160,
+                width: 500,
+                color: Colors.purple,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right:18.0),
+                      child: mainbtn_shop(),
+                    ),
+                    mainbtn_mail(),
+                  ],
+                )),
           ],
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50.0),
           child: NavigationBar(
@@ -94,18 +146,18 @@ class _HomePageState extends State<HomePage> {
             },
             destinations: const [
               NavigationDestination(
-                selectedIcon: Icon(Icons.eco),
-                icon: Icon(Icons.eco_outlined),
-                label: 'eco',
+                selectedIcon: Icon(Icons.telegram_rounded),
+                icon: Icon(Icons.telegram_outlined),
+                label: 'phone',
               ),
               NavigationDestination(
-                selectedIcon: Icon(Icons.home),
+                selectedIcon: Icon(Icons.home_filled),
                 icon: Icon(Icons.home_outlined),
                 label: 'home',
               ),
               NavigationDestination(
-                selectedIcon: Icon(Icons.person),
-                icon: Icon(Icons.person_outlined),
+                selectedIcon: Icon(Icons.info_rounded),
+                icon: Icon(Icons.info_outlined),
                 label: 'profile',
               ),
             ],
