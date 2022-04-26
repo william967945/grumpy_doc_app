@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_project/pages/homepage.dart';
+import 'package:test_project/pages/mainFunction.dart';
 
 class GetController extends GetxController {
 

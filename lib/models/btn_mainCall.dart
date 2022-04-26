@@ -5,8 +5,8 @@ import 'package:test_project/controllers/getController.dart';
 import 'package:test_project/pages/choose_gd.dart';
 import 'package:test_project/utils/colors.dart';
 
-class mainbtn_homepage extends StatelessWidget {
-   mainbtn_homepage({
+class MainbtnHomepage extends StatelessWidget {
+   MainbtnHomepage({
     Key? key,
   }) : super(key: key);
 
@@ -18,7 +18,7 @@ class mainbtn_homepage extends StatelessWidget {
     return TextButton(
       onPressed: () {
         print("Go to choose_gd.dart");
-        c.pageChange(WidgetTwo());
+        c.pageChange(ChooseGDBtn());
       },
       child: Stack(
           fit: StackFit.loose,
