@@ -1,18 +1,24 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:test_project/controllers/getController.dart';
+import 'package:test_project/pages/choose_gd.dart';
 import 'package:test_project/utils/colors.dart';
 
 class mainbtn_homepage extends StatelessWidget {
-  const mainbtn_homepage({
+   mainbtn_homepage({
     Key? key,
   }) : super(key: key);
+
+  final GetController c = Get.put(GetController());
+
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/a');
-        print("Route to page A");
+        print("Go to choose_gd.dart");
+        c.pageChange(WidgetTwo());
       },
       child: Stack(
           fit: StackFit.loose,

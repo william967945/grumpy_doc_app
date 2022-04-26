@@ -1,10 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test_project/controllers/getController.dart';
 import 'package:test_project/models/btn_mail.dart';
 import 'package:test_project/models/btn_mainCall.dart';
 import 'package:test_project/models/btn_shop.dart';
+import 'package:test_project/pages/choose_gd.dart';
 import 'package:test_project/utils/colors.dart';
 
 const TextStyle _textStyle = TextStyle(
@@ -109,32 +112,13 @@ class _HomePageState extends State<HomePage> {
             ///
             //*
             ///
-            Column(
-              children: [
-                Container(
-                  height: 270,
-                  width: 500,
-                  //color: Colors.yellow,
-                  child: Center(
-                    child: mainbtn_homepage(),
-                  ),
-                ),
-                Container(
-                    height: 160,
-                    width: 500,
-                    //color: Colors.purple,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                          child: MainBtnShop(),
-                          onPressed: () {},
-                        ),
-                        TextButton(onPressed: () {}, child: MainBtnMail()),
-                      ],
-                    )),
-              ],
-            ),
+            MainFunctionBtn(),
+            // GetBuilder<GetController>(
+            //   //init: GetController(),
+            //   builder: (c) {
+            //       return Container(child: c.pageType);
+            //     },),
+            //WidgetTwo(),
             //////
             //////
           ],
@@ -176,6 +160,42 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class MainFunctionBtn extends StatelessWidget {
+  const MainFunctionBtn({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 270,
+          width: 500,
+          //color: Colors.yellow,
+          child: Center(
+            child: mainbtn_homepage(), // turn to choose_gd.dart
+          ),
+        ),
+        Container(
+            height: 160,
+            width: 500,
+            //color: Colors.purple,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  child: MainBtnShop(),
+                  onPressed: () {},
+                ),
+                TextButton(onPressed: () {}, child: MainBtnMail()),
+              ],
+            )),
+      ],
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_project/pages/choose_gd.dart';
 import 'package:test_project/pages/homepage.dart';
 import 'package:test_project/utils/colors.dart';
@@ -17,18 +18,15 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-  // Create UI with local view and remote view
+  // Cree UI with local view and remote view
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
         scaffoldBackgroundColor: mainThemeColor,
         textTheme: GoogleFonts.odorMeanCheyTextTheme(Theme.of(context).textTheme)
       ),
       home: HomePage(),
-      routes: <String, WidgetBuilder>{
-        '/a': (BuildContext context) => ChoosingGDpage(title: 'page A'),
-      },
     );
   }
 }
