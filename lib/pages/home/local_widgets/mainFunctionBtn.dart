@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test_project/models/btn_mail.dart';
-import 'package:test_project/models/btn_mainCall.dart';
-import 'package:test_project/models/btn_shop.dart';
+import 'package:test_project/pages/home/local_widgets/btn_mail.dart';
+import 'package:test_project/pages/home/local_widgets/btn_mainCall.dart';
+import 'package:test_project/pages/home/local_widgets/btn_shop.dart';
 
-class MainFunctionBtn extends StatelessWidget {
-  const MainFunctionBtn({
+class MainFunctionWidget extends StatelessWidget {
+  const MainFunctionWidget({
     Key? key,
   }) : super(key: key);
 
@@ -17,7 +17,7 @@ class MainFunctionBtn extends StatelessWidget {
           width: 500,
           //color: Colors.yellow,
           child: Center(
-            child: MainbtnHomepage(), // turn to choose_gd.dart
+            child: MainbtnCall(), // turn to choose_gd.dart
           ),
         ),
         Container(

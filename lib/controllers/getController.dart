@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/pages/homepage.dart';
-import 'package:test_project/pages/mainFunction.dart';
+import 'package:test_project/pages/home/local_widgets/mainFunctionBtn.dart';
 
 class GetController extends GetxController {
-
   
-  Widget pageType = const MainFunctionBtn();
+  Widget pageType = const MainFunctionWidget();
 
   pageChange(Widget page) {
     pageType = page;

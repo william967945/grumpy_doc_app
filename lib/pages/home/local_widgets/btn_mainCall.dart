@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_project/controllers/getController.dart';
-import 'package:test_project/pages/choose_gd.dart';
+import 'package:test_project/pages/choosingPage/choose_gd.dart';
 import 'package:test_project/utils/colors.dart';
 
-class MainbtnHomepage extends StatelessWidget {
-   MainbtnHomepage({
+class MainbtnCall extends StatelessWidget {
+   MainbtnCall({
     Key? key,
   }) : super(key: key);
 
@@ -49,5 +49,3 @@ class MainbtnHomepage extends StatelessWidget {
     );
   }
 }
-
-
