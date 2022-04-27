@@ -27,11 +27,8 @@ class MainFunctionWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(
-                  child: MainBtnShop(),
-                  onPressed: () {},
-                ),
-                TextButton(onPressed: () {}, child: MainBtnMail()),
+                MainBtnShop(),
+                MainBtnMail(),
               ],
             )),
       ],

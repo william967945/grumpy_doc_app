@@ -1,11 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_project/controllers/getController.dart';
-import 'package:test_project/pages/home/local_widgets/mainFunctionBtn.dart';
-import 'package:test_project/utils/colors.dart';
-
+import 'package:test_project/pages/home/local_widgets/mainFunctionWidget.dart';
 import 'local_widgets/btn_Doc.dart';
 import 'local_widgets/btn_Grumpy.dart';
 
@@ -15,18 +11,6 @@ class ChooseGDBtn extends StatelessWidget {
   }) : super(key: key);
 
   final GetController c = Get.put(GetController());
-//* for testing routing function
-//
-// TextButton(
-//                 onPressed: () {
-//                   print("go to homepage.dart");
-//                   c.pageChange(MainFunctionBtn());
-//                 },
-//                 child: Container(
-//                   height: 50,
-//                   width: 50,
-//                   color: Colors.orange,
-//                 )),
 
   @override
   Widget build(BuildContext context) {
@@ -68,4 +52,3 @@ class ChooseGDBtn extends StatelessWidget {
     );
   }
 }
-

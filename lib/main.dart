@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/pages/choosingPage/choose_gd.dart';
 import 'package:test_project/pages/home/homepage.dart';
 import 'package:test_project/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test_project/pages/home/local_widgets/mainFunctionBtn.dart';
+import 'package:test_project/pages/home/local_widgets/mainFunctionWidget.dart';
 
 class GetController extends GetxController {
   
