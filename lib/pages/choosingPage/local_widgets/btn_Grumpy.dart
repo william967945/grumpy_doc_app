@@ -13,6 +13,7 @@ class BtnGrumpy extends StatelessWidget {
       //color: Colors.indigo,
       child: Center(
         child: TextButton(
+          style: TextButton.styleFrom(padding: EdgeInsets.zero),
           onPressed: () {
             print("this is Grumpy button!");
           },
@@ -21,7 +22,7 @@ class BtnGrumpy extends StatelessWidget {
               alignment: AlignmentDirectional.center,
               children: [
                 Container(
-                  height: 250,
+                  height: 170,
                   width: 250,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFEFE0),
@@ -42,8 +43,7 @@ class BtnGrumpy extends StatelessWidget {
                   child: Text(
                     "Grumpy",
                     style: TextStyle(
-                        color: Color(0xFF6F4031),
-                        fontWeight: FontWeight.bold),
+                        color: Color(0xFF6F4031), fontWeight: FontWeight.bold),
                   ),
                 ),
                 Positioned(
@@ -52,8 +52,7 @@ class BtnGrumpy extends StatelessWidget {
                   child: Text(
                     "[訴說者模式]",
                     style: TextStyle(
-                        color: Color(0xFF6F4031),
-                        fontWeight: FontWeight.bold),
+                        color: Color(0xFF6F4031), fontWeight: FontWeight.bold),
                   ),
                 )
               ]),

@@ -16,6 +16,8 @@ class MainBtnShop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
+            style: TextButton.styleFrom(padding: EdgeInsets.zero),
+
       onPressed: () {
         print("Go to shop.dart");
         c.pageChange(Shop());

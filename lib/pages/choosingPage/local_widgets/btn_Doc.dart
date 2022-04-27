@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class BtnDoc extends StatelessWidget {
@@ -14,6 +13,7 @@ class BtnDoc extends StatelessWidget {
       //color: Colors.purple,
       child: Center(
         child: TextButton(
+          style: TextButton.styleFrom(padding: EdgeInsets.zero),
           onPressed: () {
             print("this is Doc button!");
           },
@@ -22,7 +22,7 @@ class BtnDoc extends StatelessWidget {
               alignment: AlignmentDirectional.center,
               children: [
                 Container(
-                  height: 250,
+                  height: 170,
                   width: 250,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFFCE0),
@@ -43,8 +43,7 @@ class BtnDoc extends StatelessWidget {
                   child: Text(
                     "Doc",
                     style: TextStyle(
-                        color: Color(0xFF6F4031),
-                        fontWeight: FontWeight.bold),
+                        color: Color(0xFF6F4031), fontWeight: FontWeight.bold),
                   ),
                 ),
                 Positioned(
@@ -53,8 +52,7 @@ class BtnDoc extends StatelessWidget {
                   child: Text(
                     "[傾聽者模式]",
                     style: TextStyle(
-                        color: Color(0xFF6F4031),
-                        fontWeight: FontWeight.bold),
+                        color: Color(0xFF6F4031), fontWeight: FontWeight.bold),
                   ),
                 )
               ]),

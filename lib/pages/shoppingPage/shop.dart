@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_project/controllers/getController.dart';
 import 'package:test_project/pages/home/local_widgets/mainFunctionWidget.dart';
+import 'package:test_project/pages/shoppingPage/grid_GrumpyCharacter.dart';
 
 class Shop extends StatelessWidget {
   Shop({
@@ -37,19 +38,20 @@ class Shop extends StatelessWidget {
             crossAxisSpacing: 10.0,
             mainAxisSpacing: 10.0,
             children: [
+              GridGrumpyCharacter(),
               Container(
-                height: 50,
-                width: 50,
+                // height: 500,
+                // width: 50,
                 color: Color(0xFFFFECE0),
               ),
               Container(
-                height: 50,
-                width: 50,
+                // height: 50,
+                // width: 50,
                 color: Colors.blue[100],
               ),
               Container(
-                height: 50,
-                width: 50,
+                // height: 50,
+                // width: 50,
                 color: Colors.blue[200],
               ),
               Container(
